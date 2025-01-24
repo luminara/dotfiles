@@ -1,0 +1,92 @@
+* {
+  font-family: "Poppins";
+  font-size: 1rem;
+  min-height: 0;
+  min-width: 0;
+}
+
+window#waybar {
+  border-radius: 8px;
+  border: 2px solid #485263;
+  background-color: #171b20;
+}
+
+#workspaces {
+  margin-left: 5px;
+}
+
+#workspaces button {
+  color: #86aaec;
+  margin-left: 4px;
+  background-color: transparent;
+}
+
+#workspaces button.hover {
+ background-color: transparent;
+}
+
+#workspaces button.active {
+ color: #c296eb;
+ background-color: transparent;
+}
+
+#custom-player {
+  margin-left: 16px;
+}
+
+#bluetooth {
+  margin-right: 8px;
+  color: #dee1e6;
+}
+
+#network {
+  margin-right: 13px;
+}
+
+#custom-updates {
+  margin-right: 32px;
+  color: #dee1e6;
+}
+
+#pulseaudio {
+  margin-right: 12px;
+  color: #dee1e6;
+}
+
+#backlight {
+  margin-right: 12px;
+  color: #dee1e6;
+}
+
+#battery {
+  margin-right: 24px;
+  color: #dee1e6;
+  background: transparent;
+}
+
+#battery.critical:not(.charging) {
+  color: #dee1e6;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    color: #e26c7c;
+  }
+}
+
+#clock {
+  color: #dee1e6;
+  margin-right: 24px;
+}
+
+#custom-power {
+  font-size: 20px;
+  margin-right: 22px;
+  color: #e26c7c;
+  background: transparent;
+}
