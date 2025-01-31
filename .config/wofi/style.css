@@ -1,0 +1,44 @@
+@define-color black #171b20;
+@define-color grey #41454a;
+@define-color light-grey #2E3133;
+
+#window {
+  background-color: @black;
+  border: 1px solid @light-grey;
+  border-radius: 12px;
+}
+
+#outer-box {
+  background-color: transparent;
+  padding: 18px;
+}
+
+#input {
+  padding: 4px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background-color: @grey;
+  font-size: 16px;
+  border: none;
+  color: #ecf2f8;
+}
+
+#input:focus {
+  box-shadow: none;
+}
+
+#entry {
+  text-color: white;
+  padding: 8px;
+  background-color: transparent;
+}
+
+#entry:selected {
+  border-radius: 8px;
+  outline: none;
+  background-color: @light-grey;
+}
+
+#entry image {
+  margin-right: 8px;
+}
