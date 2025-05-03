@@ -12,7 +12,7 @@ window#waybar {
 }
 
 #workspaces {
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 #workspaces button {
@@ -22,12 +22,12 @@ window#waybar {
 }
 
 #workspaces button.hover {
- background-color: transparent;
+  background-color: transparent;
 }
 
 #workspaces button.active {
- color: #c296eb;
- background-color: transparent;
+  color: #c296eb;
+  background-color: transparent;
 }
 
 #custom-player {
@@ -37,6 +37,10 @@ window#waybar {
 #bluetooth {
   margin-right: 8px;
   color: #dee1e6;
+}
+
+#submap {
+  margin-right: 13px;
 }
 
 #network {
