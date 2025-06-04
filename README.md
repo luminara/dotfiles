@@ -38,7 +38,8 @@
 - **LibreWolf** - A custom version of Firefox, focused on privacy, security and freedom.
 - **MPV Player** - The Command line video player.
 - **VLC Media Player** - Videolan's on-the-go video player.
-- **wofi** - Window switcher, application launcher and dmenu replacement.
+- **Wofi** - Window switcher, application launcher and dmenu replacement.
+- **Waybar** - Highly customizable status bar.
 
 </details>
 
@@ -52,6 +53,8 @@
 - **Stow** - Utlity to easily symlink configs.
 - **fzf** - A command-line fuzzy finder.
 - **fastfetch** - Neofetch written in C.
+- **Tailscale** - Zero-config VPN built on WireGuard; connects devices securely across networks.
+- **Mechvibes Lite** - An alternative to Mechvibes (plays mechanical keyboard sounds when keys are pressed).
 
 </details>
 

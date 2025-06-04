@@ -19,6 +19,7 @@ eval "$(zoxide init bash)"
 export EDITOR=/usr/bin/nvim
 export MANPAGER='nvim +Man!'
 export MANPATH='/usr/local/man:/usr/local/share/man:/usr/share/man'
+export PATH=$PATH:/home/squares/.local/bin
 
 #____________________________Aliases__________________________________
 
@@ -26,5 +27,3 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vim="nvim"
 alias todo="nvim ~/todo/todo.md"
-
-
