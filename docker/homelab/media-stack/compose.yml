@@ -1,0 +1,29 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    user: 1000:1000
+    environment:
+      - ND_LASTFM_APIKEY
+      - ND_LASTFM_SECRET
+    ports:
+      - 4533:4533
+    restart: unless-stopped
+    volumes:
+      - ${CONFIG_DIR}/navidrome/:/data
+      - /run/media/squares/Hard Disk/Music:/music/
+      - /data/media/musics:/music/media
+      - /data/torrents/Music:/music/torrents
+
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    environment: [PUID, PGID, TZ]
+    ports:
+      - 8096:8096
+    volumes:
+      - ${CONFIG_DIR}/jellyfin:/config
+      - ${CONFIG_DIR}/jellyfin/cache:/cache
+      - ${DATA_DIR}:/data
+      - $HOME/Videos:/media:ro
+    restart: "unless-stopped"

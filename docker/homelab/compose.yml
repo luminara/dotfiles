@@ -1,0 +1,35 @@
+include:
+  - arr-stack/compose.yml
+  - media-stack/compose.yml
+
+services:
+  caddy:
+    image: ghcr.io/caddybuilds/caddy-cloudflare:latest
+    container_name: caddy
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ${CONFIG_DIR}/Caddyfile:/etc/caddy/Caddyfile
+      - ${CONFIG_DIR}/caddy/data:/data
+      - ${CONFIG_DIR}/caddy/config:/config
+
+  uptime-kuma:
+    image: louislam/uptime-kuma:latest
+    container_name: uptime-kuma
+    restart: always
+    ports:
+      - "3001:3001"
+    volumes:
+      - ${CONFIG_DIR}/uptime-kuma:/app/data
+
+  backup:
+    image: offen/docker-volume-backup:latest
+    container_name: backup-homelab
+    restart: always
+    env_file: ${CONFIG_DIR}/backup.env
+    volumes:
+      - .:/backup/homelab:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./archive:/archive

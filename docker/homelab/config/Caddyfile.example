@@ -1,0 +1,10 @@
+(cloudflare) {
+  tls {
+    dns cloudflare api_key
+  }
+}
+
+kuma.example.com {
+      reverse_proxy uptime-kuma:3001
+      import cloudflare
+}

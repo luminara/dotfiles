@@ -1,0 +1,6 @@
+**/config/**
+*.env
+
+!**/config/**/*.example
+!**/config/*.example
+!**/config/
