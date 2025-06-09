@@ -9,13 +9,15 @@ return {
         null_ls.builtins.diagnostics.erb_lint,
         null_ls.builtins.diagnostics.rubocop,
         null_ls.builtins.formatting.rubocop,
+        null_ls.builtins.formatting.goimports,
       },
     })
 
-    vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, {})
-    vim.cmd([[
-      autocmd BufWritePost * lua vim.lsp.buf.format()
-      autocmd BufWritePost * :w
-    ]])
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      pattern = "*",
+      callback = function()
+        vim.lsp.buf.format({ async = false })
+      end,
+    })
   end,
 }
