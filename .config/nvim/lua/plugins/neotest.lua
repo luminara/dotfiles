@@ -1,6 +1,6 @@
 return {
   {
     "nvim-neotest/neotest",
-    dependencies = { "nvim-neotest/nvim-nio" }
-  }
+    dependencies = { "nvim-neotest/nvim-nio" },
+  },
 }

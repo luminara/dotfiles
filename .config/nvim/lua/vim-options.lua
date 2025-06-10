@@ -2,12 +2,11 @@ vim.opt.backup = true
 vim.opt.swapfile = true
 vim.opt.writebackup = true
 vim.opt.backupext = ".bak"
-vim.opt.backupdir = vim.fn.expand('~/.cache/nvim/backup')
-vim.opt.directory = vim.fn.expand('~/.cache/nvim/swap')
-
+vim.opt.backupdir = vim.fn.expand("~/.cache/nvim/backup")
+vim.opt.directory = vim.fn.expand("~/.cache/nvim/swap")
 
 local function is_under_mnt(path)
-  return string.match(path, '^/mnt/')
+  return string.match(path, "^/mnt/")
 end
 
 vim.cmd([[
@@ -19,15 +18,15 @@ vim.cmd([[
 
 -- Lua function to dynamicly set up the backup and swap paths for files under path /mnt
 function SetupBackupSwap()
-  local file_path = vim.fn.expand('%:p')
+  local file_path = vim.fn.expand("%:p")
   if is_under_mnt(file_path) then
-    local base_dir = vim.fn.fnamemodify(file_path, ':p:h'):match("^(.-/[^/]+/[^/]+)")
-    local backup_dir = base_dir .. '/.nvim/backup'
-    local swap_dir = base_dir .. '/.nvim/swap'
+    local base_dir = vim.fn.fnamemodify(file_path, ":p:h"):match("^(.-/[^/]+/[^/]+)")
+    local backup_dir = base_dir .. "/.nvim/backup"
+    local swap_dir = base_dir .. "/.nvim/swap"
 
     -- Create the backup and swap directories if they do not exist
-    vim.fn.mkdir(backup_dir, 'p')
-    vim.fn.mkdir(swap_dir, 'p')
+    vim.fn.mkdir(backup_dir, "p")
+    vim.fn.mkdir(swap_dir, "p")
 
     -- Set Neovim options for backup and swap
     vim.opt.backupdir = backup_dir

@@ -1,1 +1,1 @@
-return { 'vuciv/golf' }
+return { "vuciv/golf" }
