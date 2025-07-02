@@ -18,22 +18,6 @@ return {
     lazy = false,
 
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-      local lspconfig = require("lspconfig")
-      lspconfig.ts_ls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.html.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.gopls.setup({
-        capabilities = capabilities,
-      })
-
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
       vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)

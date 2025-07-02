@@ -55,6 +55,7 @@
 - **fastfetch** - Neofetch written in C.
 - **Tailscale** - Zero-config VPN built on WireGuard; connects devices securely across networks.
 - **Mechvibes Lite** - An alternative to Mechvibes (plays mechanical keyboard sounds when keys are pressed).
+- **Scrcpy** - Mirror and control android device.
 
 </details>
 
