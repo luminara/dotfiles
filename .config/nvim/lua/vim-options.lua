@@ -47,7 +47,7 @@ vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { noremap = true, silent = true })
 vim.wo.number = true
 
 vim.opt.clipboard = "unnamedplus"
@@ -57,3 +57,5 @@ vim.api.nvim_set_keymap("i", "<C-s>", "<Esc>:w<CR>a", { noremap = true, silent =
 
 vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "<leader>c", "1z=", { noremap = true, silent = true })
