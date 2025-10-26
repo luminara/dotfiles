@@ -49,12 +49,12 @@ services:
       - 7878:7878
     restart: unless-stopped
 
-  readarr:
-    image: lscr.io/linuxserver/readarr:develop
-    container_name: readarr
+  bookshelf:
+    image: ghcr.io/pennydreadful/bookshelf:hardcover
+    container_name: bookshelf
     environment: [PUID, PGID, TZ]
     volumes:
-      - ${CONFIG_DIR}/readarr:/config
+      - ${CONFIG_DIR}/bookshelf:/config
       - ${DATA_DIR}:/data
     ports:
       - 8787:8787
@@ -63,7 +63,7 @@ services:
     restart: unless-stopped
 
   lidarr:
-    image: lscr.io/linuxserver/lidarr:latest
+    image: blampe/lidarr:latest
     container_name: lidarr
     environment: [PUID, PGID, TZ]
     volumes:
@@ -71,15 +71,4 @@ services:
       - ${DATA_DIR}:/data
     ports:
       - 8686:8686
-    restart: unless-stopped
-
-  bazarr:
-    image: lscr.io/linuxserver/bazarr:latest
-    container_name: bazarr
-    environment: [PUID, PGID, TZ]
-    volumes:
-      - ${CONFIG_DIR}/bazarr:/config
-      - ${DATA_DIR}:/data
-    ports:
-      - 6767:6767
     restart: unless-stopped

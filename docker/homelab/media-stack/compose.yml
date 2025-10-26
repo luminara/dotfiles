@@ -27,3 +27,36 @@ services:
       - ${DATA_DIR}:/data
       - $HOME/Videos:/media:ro
     restart: "unless-stopped"
+
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:latest
+    container_name: mealie
+    environment: [PUID, PGID, TZ]
+    ports:
+      - "9925:9000"
+    volumes:
+      - ${CONFIG_DIR}/mealie:/app/data/
+    restart: "unless-stopped"
+
+  pinchflat:
+    image: ghcr.io/kieraneglin/pinchflat:latest
+    container_name: pinchflat
+    environment: [PUID, PGID, TZ]
+    ports:
+      - "8945:8945"
+    volumes:
+      - ${CONFIG_DIR}/pinchflat:/config
+      - ${DATA_DIR}/media/youtube:/downloads
+    restart: "unless-stopped"
+
+  syncthing:
+    image: syncthing/syncthing
+    container_name: syncthing
+    environment: [PUID, PGID, TZ]
+    ports:
+      - "8384:8384"
+      - "22000:22000"
+    volumes:
+      - ${CONFIG_DIR}/syncthing:/var/syncthing
+      - ${DATA_DIR}/:/data
+    restart: unless-stopped
