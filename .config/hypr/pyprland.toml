@@ -1,0 +1,23 @@
+[pyprland]
+plugins = [
+ "scratchpads",
+ "toggle_special",
+]
+
+[scratchpads.notes]
+animation = "fromTop"
+command = "wezterm --config enable_tab_bar=false start --class=notes.scratchpad -- nvim ~/todo/todo.md"
+class = "notes.scratchpad"
+size = "75% 60%"
+max_size = "1920px 100%"
+
+[scratchpads.fum]
+animation = "fromRight"
+command = "wezterm --config enable_tab_bar=false start --class=fum.scratchpad -- fum"
+class = "fum.scratchpad"
+size = "22% 55%"
+max_size = "1920px 100%"
+unfocus = "hide"
+hysteresis = 0.2
+lazy = true
+preserve_aspect = true

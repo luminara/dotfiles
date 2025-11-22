@@ -40,6 +40,9 @@
 - **VLC Media Player** - Videolan's on-the-go video player.
 - **Wofi** - Window switcher, application launcher and dmenu replacement.
 - **Waybar** - Highly customizable status bar.
+- **Lutris** - Game manager.
+- **Feishin** - A modern self-hosted music player.
+- **KCC** - Comic and manga converter for ebook readers.
 
 </details>
 
@@ -56,6 +59,11 @@
 - **Tailscale** - Zero-config VPN built on WireGuard; connects devices securely across networks.
 - **Mechvibes Lite** - An alternative to Mechvibes (plays mechanical keyboard sounds when keys are pressed).
 - **Scrcpy** - Mirror and control android device.
+- **btop** - System monitoring tool.
+- **Ludusavi** - Backup tool for PC game saves.
+- **keyd** - A key remapping daemon for linux.
+- **fum** - A fully customizable tui-based mpris music client.
+- **pyprland** - Scratchpads for hyprland.
 
 </details>
 
@@ -99,6 +107,9 @@ I try to stick to some basic rules for my binds:-
 | <kbd>Super</kbd> + <kbd>Space</kbd>               | Launch Application launcher (wofi) |
 | <kbd>Super</kbd> + <kbd>E</kbd>                   | Launch File Manger (GUI) (Dolphin) |
 | <kbd>Super</kbd> + <kbd>Shift</kbd>+ <kbd>E</kbd> | Launch File Manger (TUI) (Yazi)    |
+| <kbd>Super</kbd> + <kbd>T</kbd>                   | Launch Gedit                       |
+| <kbd>Super</kbd> + <kbd>A</kbd>                   | Edit to-do list with nvim          |
+| <kbd>Super</kbd> + <kbd>R</kbd>                   | Toggle fum                         |
 | <kbd>Super</kbd> + <kbd>Backspace</kbd>           | Launch power menu                  |
 | <kbd>Super</kbd> + <kbd>Del</kbd>                 | Kill Hyprland session              |
 
@@ -107,6 +118,7 @@ I try to stick to some basic rules for my binds:-
 | Keys                                                 | Action                                         |
 | :--------------------------------------------------- | :--------------------------------------------- |
 | <kbd>Super</kbd> + <kbd>C</kbd>                      | Close focused window                           |
+| <kbd>Super</kbd> + <kbd>W</kbd>                      | Toggle Waybar                                  |
 | <kbd>Super</kbd> + <kbd>F</kbd>                      | Toggle the window focus                        |
 | <kbd>Super</kbd> + <kbd> SHIFT </kbd> + <kbd>F</kbd> | Toggle the window between focus and fullscreen |
 

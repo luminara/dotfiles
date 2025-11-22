@@ -1,0 +1,13 @@
+{
+  "players": ["Feishin"],
+  "use_active_player": false,
+  "fps": 10,
+  "keybinds": {
+    "esc;q": "quit()",
+    "k": "prev()",
+    "j": "next()",
+    " ": "play_pause()",
+    "h": "backward(5000)",
+    "l": "forward(5000)"
+  }
+ }
