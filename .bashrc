@@ -20,6 +20,7 @@ export EDITOR=/usr/bin/nvim
 export MANPAGER='nvim +Man!'
 export MANPATH='/usr/local/man:/usr/local/share/man:/usr/share/man'
 export PATH=$PATH:/home/squares/.local/bin
+export PATH=$PATH:$HOME/go/bin
 
 #____________________________Aliases__________________________________
 
