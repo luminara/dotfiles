@@ -49,19 +49,6 @@ services:
       - 7878:7878
     restart: unless-stopped
 
-  bookshelf:
-    image: ghcr.io/pennydreadful/bookshelf:hardcover
-    container_name: bookshelf
-    environment: [PUID, PGID, TZ]
-    volumes:
-      - ${CONFIG_DIR}/bookshelf:/config
-      - ${DATA_DIR}:/data
-    ports:
-      - 8787:8787
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    restart: unless-stopped
-
   lidarr:
     image: blampe/lidarr:latest
     container_name: lidarr
@@ -71,4 +58,22 @@ services:
       - ${DATA_DIR}:/data
     ports:
       - 8686:8686
+    restart: unless-stopped
+
+  ephemera:
+    image: ghcr.io/orwellianepilogue/ephemera:latest
+    container_name: ephemera
+    environment:
+      - PUID
+      - PGID
+      - TZ
+      - AA_BASE_URL
+      - FLARESOLVERR_URL
+      - LG_BASE_URL
+    volumes:
+      - ${CONFIG_DIR}/ephemera:/app/data
+      - ${CONFIG_DIR}/ephemera/downloads:/app/downloads
+      - ${DATA_DIR}:/data
+    ports:
+      - "8286:8286"
     restart: unless-stopped
