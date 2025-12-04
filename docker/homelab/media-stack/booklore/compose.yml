@@ -1,0 +1,30 @@
+services:
+  booklore:
+    image: booklore/booklore:latest
+    container_name: booklore
+    environment: [PUID, PGID, TZ]
+    env_file: booklore.env
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    ports:
+      - 6060:6060
+    volumes:
+      - ${CONFIG_DIR}/booklore/:/app/data
+      - ${DATA_DIR}:/data
+      - ${DATA_DIR}/media/bookdrop:/bookdrop
+    restart: unless-stopped
+
+  mariadb:
+    image: lscr.io/linuxserver/mariadb:11.4.5
+    container_name: mariadb
+    environment: [PUID, PGID, TZ]
+    env_file: booklore.env
+    volumes:
+      - ${CONFIG_DIR}/mariadb/:/config
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10

@@ -1,3 +1,6 @@
+include:
+  - booklore/compose.yml
+
 services:
   navidrome:
     image: deluan/navidrome:latest
