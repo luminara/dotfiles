@@ -4,7 +4,7 @@
   }
 }
 
-kuma.example.com {
+kuma.{$BASE_URL} {
       reverse_proxy uptime-kuma:3001
       import cloudflare
 }
