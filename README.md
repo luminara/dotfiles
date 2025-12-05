@@ -38,11 +38,17 @@
 - **LibreWolf** - A custom version of Firefox, focused on privacy, security and freedom.
 - **MPV Player** - The Command line video player.
 - **VLC Media Player** - Videolan's on-the-go video player.
-- **Wofi** - Window switcher, application launcher and dmenu replacement.
-- **Waybar** - Highly customizable status bar.
 - **Lutris** - Game manager.
 - **Feishin** - A modern self-hosted music player.
 - **KCC** - Comic and manga converter for ebook readers.
+- **qimgv** - Image viewer.
+- **mcpelauncher-linux** - Unofficial launcher for the Android version of Minecraft Bedrock Edition.
+- **Anki** - A smart spaced repetition flashcard program.
+- **Audiorelay** - Stream audio between devices.
+- **Calibre** - E-book manager.
+- **KDE Connect** - Enables communication between android and pc.
+- **Krita** - Digital painting application.
+- **Virtualbox** - General-purpose full virtualization software.
 
 </details>
 
@@ -63,7 +69,9 @@
 - **Ludusavi** - Backup tool for PC game saves.
 - **keyd** - A key remapping daemon for linux.
 - **fum** - A fully customizable tui-based mpris music client.
-- **pyprland** - Scratchpads for hyprland.
+- **intermodal** - A command-line BitTorrent metainfo utility.
+- **VeraCrypt** - Disk encryption with strong security based on TrueCrypt.
+- **zoxide** - A smarter cd command.
 
 </details>
 
@@ -71,9 +79,13 @@
   <summary>Hyprland Utils</summary>
 
 - **Hyprpaper** - Wallpaper utility.
-- **HyprPanel** - Community maintained Status Bar based on ags.
 - **Hypridle** - Hyprland screen idle manager.
 - **Hyprlock** - Hyprland's GPU-accelerated screen locking utility
+- **Hyprshot** - Hyprland screenshot utility.
+- **Hyprpicker** - Hyprland color picker.
+- **pyprland** - Scratchpads for hyprland.
+- **Waybar** - Highly customizable status bar.
+- **Wofi** - Window switcher, application launcher and dmenu replacement.
 
 </details>
 
