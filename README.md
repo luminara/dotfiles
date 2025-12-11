@@ -46,7 +46,6 @@
 - **Anki** - A smart spaced repetition flashcard program.
 - **Audiorelay** - Stream audio between devices.
 - **Calibre** - E-book manager.
-- **KDE Connect** - Enables communication between android and pc.
 - **Krita** - Digital painting application.
 - **Virtualbox** - General-purpose full virtualization software.
 
