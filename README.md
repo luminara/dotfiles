@@ -91,7 +91,8 @@
 <details>
   <summary>Some useful Projects</summary>
 
-- **🔤 NerdFont** - Beautiful Font with icon support.
+- **🔤 ttf-meslo-nerd** - Beautiful Font with icon support.
+- **🔤 noto-fonts-emoji** - emoji support.
 
 </details>
 
