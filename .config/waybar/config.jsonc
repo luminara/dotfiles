@@ -55,8 +55,8 @@
   },
   "pulseaudio": {
     "tooltip": false,
-    "format": "<span foreground=\"#98d3ee\">{icon}</span>   {volume}  |",
-    "format-muted": "<span foreground=\"#98d3ee\"></span>    |",
+    "format": "<span foreground=\"#98d3ee\">| {icon}</span> {volume} |",
+    "format-muted": "<span foreground=\"#98d3ee\"></span> |",
     "on-click-right": "pactl set-sink-mute 0 toggle",
     "on-click": "pavucontrol",
     "format-icons": {
@@ -66,7 +66,7 @@
   },
   "backlight": {
     "tooltip": false,
-    "format": "<span foreground=\"#f1d8a5\">󰃠</span>  {}  |",
+    "format": "<span foreground=\"#f1d8a5\">󰃠</span> {} |",
     "interval": 1,
     "on-scroll-up": "light -A 5",
     "on-scroll-down": "light -U 5",
@@ -78,10 +78,10 @@
       "critical": 20,
     },
     "tooltip": false,
-    "format": "<span foreground=\"#c296eb\">{icon}</span>   {capacity}",
-    "format-charging": "<span foreground=\"#c296eb\"></span>   {capacity}",
-    "format-plugged": "<span foreground=\"#c296eb\"></span>   {capacity}",
-    "format-alt": "<span foreground=\"#c296eb\">{icon}</span>   {time}",
+    "format": "<span foreground=\"#c296eb\">{icon}</span> {capacity}% |",
+    "format-charging": "<span foreground=\"#c296eb\"></span> {capacity}% |",
+    "format-plugged": "<span foreground=\"#c296eb\"></span> {capacity}% |",
+    "format-alt": "<span foreground=\"#c296eb\">{icon}</span> {time}",
     "format-icons": ["", "", "", "", ""],
   },
   "custom/power": {
