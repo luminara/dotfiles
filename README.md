@@ -48,6 +48,7 @@
 - **Calibre** - E-book manager.
 - **Krita** - Digital painting application.
 - **Virtualbox** - General-purpose full virtualization software.
+- **Pavucontrol** - General-purpose full virtualization software.
 
 </details>
 
@@ -71,6 +72,7 @@
 - **intermodal** - A command-line BitTorrent metainfo utility.
 - **VeraCrypt** - Disk encryption with strong security based on TrueCrypt.
 - **zoxide** - A smarter cd command.
+- **brightnessctl** - Read and control device brightness.
 
 </details>
 
