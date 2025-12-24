@@ -61,6 +61,8 @@
     "on-click": "pavucontrol",
     "format-icons": {
       "headphone": "",
+      "headset": "󱡏",
+      "headset-muted": "󱡐",
       "default": "",
     },
   },
@@ -68,8 +70,8 @@
     "tooltip": false,
     "format": "<span foreground=\"#f1d8a5\">󰃠</span> {} |",
     "interval": 1,
-    "on-scroll-up": "light -A 5",
-    "on-scroll-down": "light -U 5",
+    "on-scroll-up": "brightnessctl set +1%",
+    "on-scroll-down": "brightnessctl set 1%-",
   },
   "battery": {
     "states": {
