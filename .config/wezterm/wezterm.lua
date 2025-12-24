@@ -1,7 +1,14 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "Catppuccin Mocha"
+local appearance_themes = {
+  Light = "Catppuccin Latte",
+  Dark = "Catppuccin Mocha",
+}
+
+local appearance = wezterm.gui.get_appearance()
+config.color_scheme = appearance_themes[appearance]
+
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 
 config.window_background_opacity = 0.9
@@ -14,7 +21,7 @@ local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabl
 tabline.setup({
   options = {
     icons_enabled = true,
-    theme = "Catppuccin Mocha",
+    theme = appearance_themes[appearance],
     tabs_enabled = true,
   },
   sections = {
