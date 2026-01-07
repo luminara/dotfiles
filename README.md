@@ -84,6 +84,7 @@
 - **Hyprlock** - Hyprland's GPU-accelerated screen locking utility
 - **Hyprshot** - Hyprland screenshot utility.
 - **Hyprpicker** - Hyprland color picker.
+- **Hyprsunset** - Hyprland blue light filter.
 - **pyprland** - Scratchpads for hyprland.
 - **Waybar** - Highly customizable status bar.
 - **Wofi** - Window switcher, application launcher and dmenu replacement.
