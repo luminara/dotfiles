@@ -11,6 +11,16 @@ class = "notes.scratchpad"
 size = "75% 60%"
 max_size = "1920px 100%"
 
+[scratchpads.element]
+animation = "fromTop"
+command = "element-desktop"
+class = "Element"
+size = "75% 60%"
+max_size = "1920px 100%"
+lazy = true
+unfocus = "hide"
+hysteresis = 0.2
+
 [scratchpads.fum]
 animation = "fromRight"
 command = "wezterm --config enable_tab_bar=false start --class=fum.scratchpad -- fum"
