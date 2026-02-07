@@ -25,7 +25,7 @@ tabline.setup({
     tabs_enabled = true,
   },
   sections = {
-    tabline_a = {},
+    tabline_a = { 'mode' },
     tabline_b = {},
     tabline_c = {},
     tabline_x = {},
@@ -45,5 +45,13 @@ config.window_padding = {
 }
 
 config.window_decorations = "NONE"
+
+config.keys = {
+  {
+    key = 'a',
+    mods = 'CTRL',
+    action = wezterm.action.ActivateCopyMode
+  }
+}
 
 return config
