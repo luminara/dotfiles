@@ -85,6 +85,7 @@
 - **Hyprshot** - Hyprland screenshot utility.
 - **Hyprpicker** - Hyprland color picker.
 - **Hyprsunset** - Hyprland blue light filter.
+- **Hyprkcs** - Hyprland graphical keybinds visualizer/manager.
 - **pyprland** - Scratchpads for hyprland.
 - **Waybar** - Highly customizable status bar.
 - **Wofi** - Window switcher, application launcher and dmenu replacement.
