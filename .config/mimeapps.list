@@ -1,0 +1,54 @@
+[Default Applications]
+
+# Browser
+text/html=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/pdf=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+
+# File Manager
+inode/directory=dolphin.desktop
+
+# Text / Code
+text/plain=org.gnome.gedit.desktop
+application/json=org.gnome.gedit.desktop
+application/xml=org.gnome.gedit.desktop
+application/yaml=org.gnome.gedit.desktop
+application/x-shellscript=org.gnome.TextEditor.desktop
+text/csv=org.gnome.gedit.desktop
+
+# Images
+image/jpeg=qimgv.desktop
+image/png=qimgv.desktop
+image/webp=qimgv.desktop
+image/avif=qimgv.desktop
+
+# Audio
+audio/mpeg=vlc.desktop
+audio/flac=vlc.desktop
+audio/ogg=vlc.desktop
+audio/mp4=vlc.desktop
+audio/x-wav=vlc.desktop
+
+# Video
+video/mp4=vlc.desktop
+video/x-matroska=vlc.desktop
+video/webm=vlc.desktop
+video/vnd.avi=vlc.desktop
+video/quicktime=vlc.desktop
+video/mp2t=vlc.desktop
+
+# Ebooks
+application/epub+zip=calibre-gui.desktop
+application/x-mobipocket-ebook=calibre-gui.desktop
+application/lrf=calibre-lrfviewer.desktop
+
+# Custom schemes
+x-scheme-handler/tonsite=org.telegram.desktop.desktop
+x-scheme-handler/viber=viber.desktop
+x-scheme-handler/lunarclient=lunarclient.desktop
+x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop
+x-scheme-handler/discord-562286213059444737=lunarclient.desktop
+x-scheme-handler/discord-831593107883032657=discord-831593107883032657.desktop
