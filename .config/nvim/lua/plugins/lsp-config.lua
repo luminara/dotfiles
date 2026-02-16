@@ -18,6 +18,15 @@ return {
     lazy = false,
 
     config = function()
+      vim.lsp.config("harper_ls", {
+        filetypes = { "markdown", "text" },
+      })
+
+      vim.lsp.config("tinymist", {
+        settings = {
+          formatterMode = "typstyle",
+        }
+      })
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
       vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
