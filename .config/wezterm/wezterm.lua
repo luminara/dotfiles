@@ -1,13 +1,9 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-local appearance_themes = {
-  Light = "Catppuccin Latte",
-  Dark = "Catppuccin Mocha",
-}
-
-local appearance = wezterm.gui.get_appearance()
-config.color_scheme = appearance_themes[appearance]
+local theme_path = wezterm.home_dir .. "/.config/wezterm/colors/matugen_theme.toml"
+config.color_scheme_dirs = { theme_path }
+config.color_scheme = "matugen_theme"
 
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 
@@ -18,10 +14,11 @@ config.tab_bar_at_bottom = true
 
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 
+local scheme = wezterm.color.load_scheme(theme_path)
 tabline.setup({
   options = {
     icons_enabled = true,
-    theme = appearance_themes[appearance],
+    theme = scheme,
     tabs_enabled = true,
   },
   sections = {
