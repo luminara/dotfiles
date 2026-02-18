@@ -108,3 +108,15 @@ window#waybar {
   color: @error;
   background: transparent;
 }
+
+#network,
+#pulseaudio,
+#backlight {
+  color: @tertiary;
+}
+
+#network:hover,
+#pulseaudio:hover,
+#backlight:hover {
+  color: @surface_tint;
+}
