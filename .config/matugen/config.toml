@@ -8,3 +8,8 @@ post_hook = 'touch ~/.config/wezterm/wezterm.lua'
 input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/waybar/matugen_generated_colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.pywalfox]
+input_path = '~/.config/matugen/templates/pywalfox-colors.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
