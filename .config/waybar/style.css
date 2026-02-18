@@ -1,3 +1,5 @@
+@import "matugen_generated_colors.css";
+
 * {
   font-family: "MesloLGM Nerd Font Propo";
   font-size: 1rem;
@@ -7,69 +9,81 @@
 
 window#waybar {
   border-radius: 8px;
-  border: 2px solid #485263;
-  background-color: #171b20;
+  border: 2px solid @outline;
+  background-color: @surface;
+  color: @on_surface;
 }
 
 #workspaces {
-  margin-left: 0px;
+  margin: 3px;
 }
 
 #workspaces button {
-  color: #86aaec;
+  color: @primary;
   margin-left: 4px;
   background-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
 
-#workspaces button.hover {
-  background-color: transparent;
+#workspaces button {
+  margin-left: 4px;
+  background: transparent;
+  border: none;
 }
 
 #workspaces button.active {
-  color: #c296eb;
-  background-color: transparent;
+  color: @on_primary_container;
+  background: transparent;
+}
+
+#workspaces button:hover {
+  background: @primary_container;
+  border: none;
 }
 
 #custom-player {
   margin-left: 16px;
+  color: @secondary;
 }
 
 #bluetooth {
   margin-right: 8px;
-  color: #dee1e6;
+  color: @on_surface;
 }
 
 #submap {
   margin-right: 13px;
+  color: @tertiary;
 }
 
 #network {
   margin-right: 13px;
+  color: @secondary;
 }
 
 #custom-updates {
   margin-right: 32px;
-  color: #dee1e6;
+  color: @primary;
 }
 
 #pulseaudio {
   margin-right: 12px;
-  color: #dee1e6;
+  color: @on_surface;
 }
 
 #backlight {
   margin-right: 12px;
-  color: #dee1e6;
+  color: @on_surface_variant;
 }
 
 #battery {
   margin-right: 24px;
-  color: #dee1e6;
+  color: @on_surface;
   background: transparent;
 }
 
 #battery.critical:not(.charging) {
-  color: #dee1e6;
+  color: @error;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -79,18 +93,18 @@ window#waybar {
 
 @keyframes blink {
   to {
-    color: #e26c7c;
+    color: @error_container;
   }
 }
 
 #clock {
-  color: #dee1e6;
+  color: @on_surface;
   margin-right: 24px;
 }
 
 #custom-power {
   font-size: 20px;
   margin-right: 22px;
-  color: #e26c7c;
+  color: @error;
   background: transparent;
 }
