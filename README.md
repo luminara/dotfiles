@@ -201,6 +201,7 @@ I try to stick to some basic rules for my binds:-
 - michaelbrusegard for [tabline.wez][tabline_wez].
 - dqrk0jeste for their [dotfiles][dqrk0jeste_dotfiles]. I really love their waybar & wofi config.
 - typecraft-dev for his [neovim dotfiles][typecraft_nvim] and amazing tutorials on [youtube][typecraft_yt].
+- dharmx for their [wallpaper collections][wallpapers].
 
 </br></br>
 
@@ -211,3 +212,4 @@ I try to stick to some basic rules for my binds:-
 [dqrk0jeste_dotfiles]: https://github.com/dqrk0jeste/dotfiles
 [typecraft_nvim]: https://github.com/typecraft-dev/dotfiles/tree/master/nvim/.config/nvim
 [typecraft_yt]: https://www.youtube.com/@typecraft_dev
+[wallpapers]: https://github.com/dharmx/walls
