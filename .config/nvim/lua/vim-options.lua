@@ -59,3 +59,16 @@ vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<leader>c", "1z=", { noremap = true, silent = true })
+
+vim.api.nvim_create_autocmd("Signal", {
+  pattern = "SIGUSR1",
+  callback = function()
+    if vim.o.background == "dark" then
+      vim.o.background = "light"
+    else
+      vim.o.background = "dark"
+    end
+    local flavor = (vim.o.background == "light") and "latte" or "mocha"
+    vim.cmd.colorscheme("catppuccin-" .. flavor)
+  end,
+})
