@@ -1,11 +1,9 @@
-@define-color black #171b20;
-@define-color grey #41454a;
-@define-color light-grey #2E3133;
+@import url("/home/squares/.config/wofi/matugen_generated.css");
 
 #window {
-  background-color: @black;
-  border: 1px solid @light-grey;
-  border-radius: 12px;
+  background-color: @surface;
+  border: 1px solid @outline_variant;
+  color: @on_surface;
 }
 
 #outer-box {
@@ -14,21 +12,22 @@
 }
 
 #input {
-  padding: 4px;
+  padding: 6px;
   margin-bottom: 8px;
   border-radius: 10px;
-  background-color: @grey;
+  background-color: @surface_container_high;
   font-size: 16px;
-  border: none;
-  color: #ecf2f8;
+  border: 1px solid @outline;
+  color: @on_surface_variant;
 }
 
 #input:focus {
-  box-shadow: none;
+  box-shadow: 0 0 0 2px @primary;
+  border: 1px solid @primary;
 }
 
 #entry {
-  text-color: white;
+  color: @on_surface;
   padding: 8px;
   background-color: transparent;
 }
@@ -36,7 +35,11 @@
 #entry:selected {
   border-radius: 8px;
   outline: none;
-  background-color: @light-grey;
+  background-color: @primary_container;
+}
+
+#entry:selected label {
+  color: @on_surface;
 }
 
 #entry image {
