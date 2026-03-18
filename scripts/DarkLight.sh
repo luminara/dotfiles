@@ -75,7 +75,7 @@ fi
 notify-send -u low "Theme Switch" \
   "Mode: $next_mode | Wallpaper: $(basename "$next_wallpaper")"
 
-matugen image "$next_wallpaper" --mode "${next_mode,,}"
+matugen image "$next_wallpaper" --mode "${next_mode,,}" --source-color-index 0
 pkill -SIGUSR1 nvim || true
 hyprctl hyprpaper wallpaper , "$next_wallpaper"
 
