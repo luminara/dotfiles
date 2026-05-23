@@ -8,6 +8,7 @@
   "modules-right": [
     "hyprland/submap",
     "network",
+    "memory",
     "custom/updates",
     "pulseaudio",
     "backlight",
@@ -15,12 +16,6 @@
     "clock",
     "custom/power",
   ],
-  "custom/launcher": {
-    "format": " ",
-    "tooltip": false,
-    "on-click": "rofi -show drun",
-    "on-click-right": "killall rofi",
-  },
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -43,10 +38,20 @@
   },
   "network": {
     "format-wifi": "<span>{icon}</span> |",
-    "format-disconnected": "󰤮",
+    "format-disconnected": "<span>󰤮</span> |",
     "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format-wifi": "{essid}",
     "on-click": "nm-connection-editor",
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {}% |",
+    "states": {
+      "critical": 85,
+      "warning": 80,
+      "good": 10,
+    },
+    "on-click": "wezterm start btop",
   },
   "pulseaudio": {
     "tooltip": false,
