@@ -1,0 +1,11 @@
+-- Global variables shared across all config files
+MainMod        = "SUPER"
+MacroMod       = "ALT"
+Terminal       = "wezterm"
+Menu           = "wofi --show drun"
+FileManager    = "dolphin"
+TuiFileManager = "yazi"
+TextEditor     = "gedit"
+MusicPlayer    = "feishin"
+ChangeConf     = "~/scripts/xppentablet-config/change-xppentablet-config.sh"
+ConfDir        = "~/scripts/xppentablet-config/config"
