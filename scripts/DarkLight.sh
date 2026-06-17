@@ -68,8 +68,10 @@ fi
 
 if [[ "$next_mode" == "Dark" ]]; then
   gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+  gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 else
   gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
+  gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-light"
 fi
 
 notify-send -u low "Theme Switch" \
