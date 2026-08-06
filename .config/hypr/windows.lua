@@ -19,6 +19,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-  match = { title = "^(qBittorrent.*)" },
-  workspace = "10 silent",
+  match = { class = "blueman-manager" },
+  workspace = "special:minimized",
 })
