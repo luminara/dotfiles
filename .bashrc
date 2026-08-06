@@ -9,7 +9,6 @@ fastfetch -c ~/.config/fastfetch/small.jsonc
 
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\W\[\033[00m\]\\$ '
 
-
 #_______________________Shell Integrations____________________________
 
 eval "$(zoxide init bash)"
@@ -27,4 +26,5 @@ export PATH=$PATH:$HOME/go/bin
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vim="nvim"
+alias cd="z"
 alias todo="nvim ~/todo/todo.md"
