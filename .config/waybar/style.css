@@ -23,10 +23,6 @@ window#waybar {
   margin-left: 4px;
   background-color: transparent;
   transition: all 0.3s ease-in-out;
-}
-
-#workspaces button {
-  margin-left: 4px;
   background: transparent;
   border: none;
 }
@@ -59,22 +55,6 @@ window#waybar {
 #network {
   margin-right: 13px;
   color: @secondary;
-}
-
-#custom-updates {
-  margin-right: 32px;
-  color: @primary;
-}
-
-#pulseaudio,
-#memory {
-  margin-right: 12px;
-  color: @on_surface;
-}
-
-#backlight {
-  margin-right: 12px;
-  color: @on_surface_variant;
 }
 
 #battery {
@@ -114,7 +94,9 @@ window#waybar {
 #network,
 #memory,
 #pulseaudio,
-#backlight {
+#backlight,
+#custom-countdowns {
+  margin-right: 12px;
   color: @tertiary;
 }
 

@@ -8,8 +8,8 @@
   "modules-right": [
     "hyprland/submap",
     "network",
+    "custom/countdowns",
     "memory",
-    "custom/updates",
     "pulseaudio",
     "backlight",
     "battery",
@@ -32,9 +32,16 @@
     "max-length": 30,
     "tooltip": false,
   },
+  "custom/countdowns": {
+    "format": "󰃰 {} |",
+    "exec": "~/scripts/countdowns.py",
+    "interval": 3600,
+    "return-type": "json",
+  },
   "clock": {
     "format": "{:%I:%M %p}",
     "tooltip-format": "{}",
+    "on-click": "~/scripts/np-date.sh",
   },
   "network": {
     "format-wifi": "<span>{icon}</span> |",
