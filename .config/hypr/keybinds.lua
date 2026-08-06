@@ -23,6 +23,7 @@ hl.bind(MainMod .. " + SHIFT + E", hl.dsp.exec_cmd(Terminal .. " start " .. TuiF
 hl.bind(MainMod .. " + T", hl.dsp.exec_cmd(TextEditor))
 hl.bind(MainMod .. " + space", hl.dsp.exec_cmd(Menu))
 hl.bind(MainMod .. " + P", hl.dsp.exec_cmd("hyprkcs"))
+hl.bind(MainMod .. " + B", hl.dsp.exec_cmd("blueman-manager"))
 
 -- Window management
 hl.bind(MainMod .. " + C", hl.dsp.window.close())
@@ -41,6 +42,7 @@ hl.bind("CONTROL + SHIFT + Q", hl.dsp.exec_cmd("bash ~/scripts/dismount_veracryp
 -- Toggle Waybar / Hyprsunset
 hl.bind(MainMod .. " + W", hl.dsp.exec_cmd([[bash -c "pgrep waybar && pkill waybar || waybar"]]))
 hl.bind(MainMod .. " + S", hl.dsp.exec_cmd([[bash -c "pgrep hyprsunset && pkill hyprsunset || hyprsunset"]]))
+hl.bind(MainMod .. " + comma", hl.dsp.exec_cmd("swaync-client -t"))
 
 -- Toggle WiFi (Numpad 0 = KP_Insert)
 hl.bind(MainMod .. " + KP_Insert",
@@ -97,11 +99,11 @@ hl.bind(MainMod .. " + SHIFT + D", hl.dsp.exec_cmd("bash ~/scripts/WallpaperSele
 hl.bind(MainMod .. " + A", hl.dsp.exec_cmd("pypr toggle notes"))
 hl.bind(MainMod .. " + M", hl.dsp.exec_cmd("pypr toggle element"))
 hl.bind(MainMod .. " + R",
-  hl.dsp.exec_cmd("bash -c 'pgrep " .. MusicPlayer .. " && pypr toggle fum || " .. MusicPlayer .. "'"))
+  hl.dsp.exec_cmd("bash -c 'pgrep -f " .. MusicPlayer .. " && pypr toggle fum || " .. MusicPlayer .. "'"))
 
 -- Special workspace (minimise scratchpad)
-hl.bind(MainMod .. " + N", hl.dsp.workspace.toggle_special({ name = "minimized" }))
-hl.bind(MainMod .. " + SHIFT + N", hl.dsp.exec_cmd("pypr toggle_special minimized"))
+hl.bind(MainMod .. " + N", hl.dsp.workspace.toggle_special("minimized"))
+hl.bind(MainMod .. " + SHIFT + N", hl.dsp.window.move({ workspace = "special:minimized" }))
 
 -- Lid switch → lock
 hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("hyprlock"), { locked = true })
